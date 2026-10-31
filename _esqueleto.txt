@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+      <!--- METADATOS --->
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <!--- TITULO DE LA PESTAÑA DEL ARCHIVO --->
+      <title>Reseñas - Hotel Terracota</title>
+      <!--- ESTILOS --->
+      <link rel="stylesheet" href="../css/estilo.css">
+</head>
+
+<body>
+      <!--- HEADER --->
+      <header>
+            <h1>Hotel Terracota</h1>
+      </header>
+
+      <!--- NAVEGADOR --->
+      <nav id="menu-global">
+            <a href="#">Inicio</a>
+            <a href="#">Apartamentos</a>
+            <a href="#">Reservas</a>
+            <a href="#">Servicios</a>
+            <a href="#">Reseñas</a>
+            <a href="#">Institucional</a>
+            <a href="#">Contacto</a>
+            <a href="#">Iniciar sesión</a>
+      </nav>
+
+      <!--- CONTENIDO PRINCIPAL --->
+      <main>
+            <!--- ENLACE A INICIO --->
+            <nav> </nav>
+
+            <!--- SECCIONES --->
+            <section>
+                  <!--- ARTICULOS --->
+                  <article> </article> 
+            </section>
+
+      </main>
+
+      <!--- PIE DE PAGINA --->
+      <footer>
+        <address>Todos los derechos reservados</address>
+      </footer>
+
+</body>
+
+</html>

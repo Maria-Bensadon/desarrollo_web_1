@@ -1,0 +1,40 @@
+aparthotel/
+    ├── index.html
+    ├── institucional.html
+    ├── contacto.html
+    ├── acceso.html
+    ├── registro.html
+    │
+    ├── cliente/
+    │      ├── apartamentos.html
+    │      ├── reservas.html
+    │      ├── reserva-realizar.html
+    │      ├── servicios.html
+    │      └── resena.html
+    │
+    ├── recepcionista/
+    │      ├── reservas.html
+    │      ├── estadias.html
+    │      ├── apartamentos.html
+    │      └── reportes.html
+    │
+    ├── limpieza/
+    │      └── apartamentos.html
+    │
+    ├── administrador/
+    │      ├── usuarios.html
+    │      ├── apartamentos.html
+    │      ├── apartamento-registrar.html
+    │      ├── apartamento-editar.html
+    │      ├── apartamento-eliminar.html
+    │      ├── reservas.html
+    │      └── monitoreo.html
+    │
+    ├── gerencia/
+    │      ├── reservas-estadias.html
+    │      ├── apartamentos.html
+    │      └── informes.html
+    │
+    ├── css/
+    │    └── estilo.css
+    └── img/
