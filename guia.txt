@@ -1,33 +1,40 @@
 aparthotel/
-├── index.html                  (portada pública + acceso a "elegir rol")
-├── acceso.html                 (selección de rol o login simulado)
-├── css/
-│   └── estilos.css
-├── img/
-│   
-| ============ SE EMPIEZA POR ACA ====================
+├── index.html
+├── institucional.html
+├── contacto.html
+├── acceso.html
+├── registro.html
+│
 ├── cliente/
-│   ├── apartamentos.html       (tipos, características y comodidades, galería, tarifas, disponibilidad)
-│   ├── reservas.html           (realizar, consultar, cancelar)
-│   ├── servicios.html          (limpieza, lavandería, medios de pago)
-│   └── resenas.html            (dejar una reseña)
+│   ├── apartamentos.html
+│   ├── reservas.html
+│   ├── reserva-realizar.html
+│   ├── servicios.html
+│   └── resena.html
 │
 ├── recepcionista/
-│   ├── reservas.html           (consultar, realizar, cancelar)
-│   ├── estadias.html           (check-in, check-out)
-│   ├── apartamentos.html       (consultar, disponibilidad, estado)
+│   ├── reservas.html
+│   ├── estadias.html
+│   ├── apartamentos.html
 │   └── reportes.html
 │
 ├── limpieza/
-│   └── apartamentos.html       (estado, pendientes de limpieza, actualizar estado)
+│   └── apartamentos.html
 │
 ├── administrador/
-│   ├── sistema.html            (usuarios, roles y permisos)
-│   ├── apartamentos.html       (gestionar, actualizar info, tarifas)
-│   ├── reservas.html           (consultar)
-│   └── monitoreo.html          (estado de apartamentos, reportes)
+│   ├── usuarios.html
+│   ├── apartamentos.html
+│   ├── apartamento-registrar.html
+│   ├── apartamento-editar.html
+│   ├── apartamento-eliminar.html
+│   ├── reservas.html
+│   └── monitoreo.html
 │
-└── gerencia/
-    ├── reservas-estadias.html  (reservas, ocupación, check-in/out)
-    ├── apartamentos.html       (consultar, disponibilidad, estado)
-    └── monitoreo.html          (reportes, ocupación, funcionamiento general)
+├── gerencia/
+│   ├── reservas-estadias.html
+│   ├── apartamentos.html
+│   └── informes.html
+│
+├── css/
+│   └── estilo.css
+└── img/
