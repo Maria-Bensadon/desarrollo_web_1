@@ -1,0 +1,33 @@
+aparthotel/
+├── index.html                  (portada pública + acceso a "elegir rol")
+├── acceso.html                 (selección de rol o login simulado)
+├── css/
+│   └── estilos.css
+├── img/
+│   
+| ============ SE EMPIEZA POR ACA ====================
+├── cliente/
+│   ├── apartamentos.html       (tipos, características y comodidades, galería, tarifas, disponibilidad)
+│   ├── reservas.html           (realizar, consultar, cancelar)
+│   ├── servicios.html          (limpieza, lavandería, medios de pago)
+│   └── resenas.html            (dejar una reseña)
+│
+├── recepcionista/
+│   ├── reservas.html           (consultar, realizar, cancelar)
+│   ├── estadias.html           (check-in, check-out)
+│   ├── apartamentos.html       (consultar, disponibilidad, estado)
+│   └── reportes.html
+│
+├── limpieza/
+│   └── apartamentos.html       (estado, pendientes de limpieza, actualizar estado)
+│
+├── administrador/
+│   ├── sistema.html            (usuarios, roles y permisos)
+│   ├── apartamentos.html       (gestionar, actualizar info, tarifas)
+│   ├── reservas.html           (consultar)
+│   └── monitoreo.html          (estado de apartamentos, reportes)
+│
+└── gerencia/
+    ├── reservas-estadias.html  (reservas, ocupación, check-in/out)
+    ├── apartamentos.html       (consultar, disponibilidad, estado)
+    └── monitoreo.html          (reportes, ocupación, funcionamiento general)
