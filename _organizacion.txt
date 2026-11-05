@@ -1,4 +1,5 @@
 aparthotel/
+    |
     ├── index.html
     ├── institucional.html
     ├── contacto.html
@@ -37,4 +38,5 @@ aparthotel/
     │
     ├── css/
     │    └── estilo.css
+    |
     └── img/
