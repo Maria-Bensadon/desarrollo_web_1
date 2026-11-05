@@ -7,6 +7,7 @@
     <title>Reservas - Hotel Terracota</title>
     <link rel="stylesheet" href="../css/estilo.css">
 </head>
+<!-- Bazan Lourdes -->
 
 <body>
     <header>
@@ -34,14 +35,89 @@
 
         <p><a href="reserva-realizar.html">Realizar reserva</a></p>
 
+        <p>Desde esta sección podés realizar una nueva reserva, consultar el estado de una reserva existente o cancelarla.</p>
+
         <section id="consultar-reserva">
             <h3>Consultar reserva</h3>
+
             <!-- form con campo de código de reserva (o DNI) y botón Buscar; debajo, un recuadro con el resultado de ejemplo -->
+
+             <div>
+                <form action="reservas.html#resultado-consulta" accept-charset="UTF-8" method="post">
+                    <fieldset>
+                        <legend>Buscar reserva</legend>
+                        <p>
+                            <label for="codigo_consulta">Código de reserva o DNI *</label>
+                            <input id="codigo_consulta" name="codigo_consulta" type="text" required minlength="6"
+                                maxlength="12" placeholder="ej: TER-00125 o 40123456">
+                        </p>
+                    </fieldset>
+                    <input type="submit" value="Buscar">
+                    <input type="reset" value="Borrar">
+                </form>
+            </div>
+
+            <!-- Ejemplo de resultado de consulta-->
+             <div id="resultado-consulta">
+                <h4>Resultado de la consulta</h4>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Código</th>
+                            <th>Titular</th>
+                            <th>Email</th>
+                            <th>Tipo de departamento</th>
+                            <th>Ingreso</th>
+                            <th>Salida</th>
+                            <th>Estado</th>
+                            <th>Acción</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>TER-00125</td>
+                            <td>María González</td>
+                            <td>maria.gonzalez@email.com</td>
+                            <td>Departamento Concept Doble</td>
+                            <td>15/12/2026</td>
+                            <td>18/12/2026</td>
+                            <td>Confirmada</td>
+                            <td><a href="#cancelar-reserva">Cancelar</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
         </section>
 
         <section id="cancelar-reserva">
             <h3>Cancelar reserva</h3>
+
             <!-- form con campo de código de reserva, motivo (opcional) y botón Cancelar reserva -->
+
+             <div>
+                <form action="" accept-charset="UTF-8" method="post">
+                    <fieldset>
+                        <legend>Datos de la cancelación</legend>
+                        <p>
+                            <label for="codigo_cancelar">Código de reserva *</label>
+                            <input id="codigo_cancelar" name="codigo_cancelar" type="text" required minlength="6"
+                                maxlength="12" placeholder="ej: TER-00125">
+                        </p>
+                        <p>
+                            <label for="motivo">Motivo (opcional)</label>
+                            <textarea id="motivo" name="motivo" rows="3"
+                                placeholder="Contanos por qué cancelás la reserva"></textarea>
+                        </p>
+                        <p>
+                            <input id="confirmar" name="confirmar" type="checkbox" required>
+                            <label for="confirmar">Confirmo que deseo cancelar esta reserva *</label>
+                        </p>
+                    </fieldset>
+                    <input type="submit" value="Cancelar reserva">
+                    <input type="reset" value="Borrar">
+                </form>
+            </div>
+        </section>
         </section>
 
     </main>

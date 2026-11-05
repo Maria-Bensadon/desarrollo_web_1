@@ -8,7 +8,8 @@
     <link rel="stylesheet" href="../css/estilo.css">
 </head>
 
-<!---- Nombre:  ---->
+<!---- Nombre:  Lourdes ---->
+
 <body>
     <header>
         <h1>Hotel Terracota</h1>
@@ -33,14 +34,99 @@
 
         <h2>Reseñas</h2>
 
+        <p>Tu opinión nos ayuda a mejorar. Contanos cómo fue tu experiencia en el Hotel Terracota
+            y leé lo que opinan otros huéspedes.</p>
+
         <section id="dejar-resena">
             <h3>Dejar una reseña</h3>
             <!-- form: nombre, puntaje (select o radio 
              de 1 a 5), comentario (textarea), 
              botones Borrar y Enviar. 
              Opcional: un section aparte con reseñas de ejemplo -->
-        </section>
 
+            <div>
+                <form action="" accept-charset="UTF-8" method="post">
+                    <fieldset>
+                        <legend>Tus datos</legend>
+                        <p>
+                            <label for="nombre_resena">Nombre *</label>
+                            <input id="nombre_resena" name="nombre_resena" type="text" required minlength="3"
+                                maxlength="32" placeholder="Escriba su nombre">
+                        </p>
+                        <!-- Codigo de reserva, para que solo opinen huespedes que se alojaron -->
+                        <p>
+                            <label for="codigo_resena">Código de reserva *</label>
+                            <input id="codigo_resena" name="codigo_resena" type="text" required minlength="6"
+                                maxlength="12" placeholder="ej: TER-00125">
+                        </p>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Tu experiencia</legend>
+
+                        <fieldset>
+                            <legend>Puntaje *</legend>
+                            <p>
+                                <input id="puntaje_1" name="puntaje" type="radio" value="1" required>
+                                <label for="puntaje_1">1 - Malo</label>
+                            </p>
+                            <p>
+                                <input id="puntaje_2" name="puntaje" type="radio" value="2">
+                                <label for="puntaje_2">2 - Regular</label>
+                            </p>
+                            <p>
+                                <input id="puntaje_3" name="puntaje" type="radio" value="3">
+                                <label for="puntaje_3">3 - Bueno</label>
+                            </p>
+                            <p>
+                                <input id="puntaje_4" name="puntaje" type="radio" value="4">
+                                <label for="puntaje_4">4 - Muy bueno</label>
+                            </p>
+                            <p>
+                                <input id="puntaje_5" name="puntaje" type="radio" value="5">
+                                <label for="puntaje_5">5 - Excelente</label>
+                            </p>
+                        </fieldset>
+
+                        <p>
+                            <label for="comentario">Comentario *</label>
+                            <textarea id="comentario" name="comentario" rows="4" required minlength="10" maxlength="500"
+                                placeholder="Contanos cómo fue tu estadía">
+                            </textarea>
+                        </p>
+                    </fieldset>
+                    <input type="submit" value="Enviar">
+                    <input type="reset" value="Borrar">
+                </form>
+            </div>
+
+            <section id="opiniones">
+                <h3>Opiniones de huéspedes</h3>
+
+                <article>
+                    <h4>María González</h4>
+                    <p>Departamento Concept Doble · <time datetime="2026-12-18">18/12/2026</time></p>
+                    <p>Puntaje: ★★★★★ (5 de 5)</p>
+                    <p>Excelente atención desde la recepción. El departamento estaba impecable y la cocina tenía todo
+                        lo necesario. Volvería sin dudarlo.</p>
+                </article>
+
+                <article>
+                    <h4>Jorge Herrera</h4>
+                    <p>Departamento Concept Cuádruple · <time datetime="2026-10-12">12/10/2026</time></p>
+                    <p>Puntaje: ★★★★☆ (4 de 5)</p>
+                    <p>Viajamos en familia y el espacio fue ideal. El balcón tiene una linda vista a los cerros.
+                        Solo mejoraría el wifi en los dormitorios.</p>
+                </article>
+
+                <article>
+                    <h4>Valeria Ríos</h4>
+                    <p>Studio Matrimonial · <time datetime="2026-09-05">05/09/2026</time></p>
+                    <p>Puntaje: ★★★★☆ (4 de 5)</p>
+                    <p>Muy buena ubicación y el servicio de lavandería fue rápido. Ideal para un viaje de trabajo.</p>
+                </article>
+            </section>
+        </section>
     </main>
 
     <footer>

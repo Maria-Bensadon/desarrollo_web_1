@@ -2,51 +2,75 @@
 <html lang="es">
 
 <head>
-      <!--- METADATOS --->
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <!--- TITULO DE LA PESTAÑA DEL ARCHIVO --->
-      <title>Reseñas - Hotel Terracota</title>
-      <!--- ESTILOS --->
-      <link rel="stylesheet" href="../css/estilo.css">
+    <!--- METADATOS --->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--- TITULO DE LA PESTAÑA: cambia en cada página --->
+    <title>Nombre de la página - Hotel Terracota</title>
+    <!--- ESTILOS: en la raiz es css/estilo.css, dentro de una carpeta es ../css/estilo.css --->
+    <link rel="stylesheet" href="../css/estilo.css">
 </head>
 
 <body>
-      <!--- HEADER --->
-      <header>
-            <h1>Hotel Terracota</h1>
-      </header>
+    <!--- ENCABEZADO: logo, titulo, fecha y hora, buscador general --->
+    <header>
+        <img src="../img/logo.svg" alt="Logo Hotel Terracota">
+        <h1>Hotel Terracota</h1>
+        <p id="fecha-hora">Jueves 5 de noviembre de 2026 - 08:30 hs</p>
+        <form id="buscador" action="../publico/resultados.html" method="get" accept-charset="UTF-8">
+            <input id="criterio" name="criterio" type="text" class="campos" placeholder="buscar en el sitio">
+            <input type="submit" value="Buscar" class="botones botonEnviar">
+        </form>
+    </header>
 
-      <!--- NAVEGADOR --->
-      <nav id="menu-global">
-            <a href="#">Inicio</a>
-            <a href="#">Apartamentos</a>
-            <a href="#">Reservas</a>
-            <a href="#">Servicios</a>
-            <a href="#">Reseñas</a>
-            <a href="#">Institucional</a>
-            <a href="#">Contacto</a>
-            <a href="#">Iniciar sesión</a>
-      </nav>
+    <!--- MENU GLOBAL HORIZONTAL: igual en todas las paginas (solo cambia el ../ segun la carpeta).
+          En las paginas de gestion el ultimo enlace es "Cerrar sesión" en lugar de "Iniciar sesión" --->
+    <nav id="menu-global">
+        <a href="../index.html">Inicio</a>
+        <a href="../publico/institucional.html">Institucional</a>
+        <a href="../cliente/apartamentos.html">Apartamentos</a>
+        <a href="../cliente/servicios.html">Servicios</a>
+        <a href="../publico/contacto.html">Contacto</a>
+        <a href="../publico/acceso.html">Iniciar sesión</a>
+    </nav>
 
-      <!--- CONTENIDO PRINCIPAL --->
-      <main>
-            <!--- ENLACE A INICIO --->
-            <nav> </nav>
+    <main>
+        <!--- MENU VERTICAL: aca vive el sistema de gestión. Cambia segun el rol (carpeta) --->
+        <nav id="menu-vertical">
+            <p><b>Nombre del rol</b></p>
+            <ul>
+                <li><a href="#">Opción 1</a></li>
+                <li><a href="#">Opción 2</a></li>
+            </ul>
+        </nav>
 
-            <!--- SECCIONES --->
-            <section>
-                  <!--- ARTICULOS --->
-                  <article> </article> 
+        <!--- CONTENIDO: todo lo que cambia en cada pagina va aca adentro --->
+        <div id="contenido">
+            <!--- RUTA DE NAVEGACION --->
+            <nav id="ruta">
+                <a href="../index.html">Inicio</a> &gt; Nombre de la página
+            </nav>
+
+            <h2>Título de la página</h2>
+
+            <!--- SECCIONES: una por cada función, con su id --->
+            <section id="nombre-seccion">
+                <h3>Título de la sección</h3>
+                <!--- ARTICULOS, FORMULARIOS, TABLAS --->
+                <article> </article>
             </section>
+        </div>
+    </main>
 
-      </main>
-
-      <!--- PIE DE PAGINA --->
-      <footer>
-        <address>Todos los derechos reservados</address>
-      </footer>
-
+    <!--- PIE DE PAGINA --->
+    <footer>
+        <address>
+            <p>Dirección: Calle Ejemplo 123, San Fernando del Valle de Catamarca, Catamarca</p>
+            <p>Teléfono: 383 400-0000 - Email: info@hotelterracota.com.ar</p>
+            <p>Redes sociales: <a href="#">Facebook</a> - <a href="#">Instagram</a></p>
+            <p>Todos los derechos reservados a Hotel Terracota</p>
+        </address>
+    </footer>
 </body>
 
 </html>

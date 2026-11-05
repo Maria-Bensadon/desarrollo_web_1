@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar sesión - Hotel Terracota</title>
+    <link rel="stylesheet" href="../css/estilo.css">
+</head>
+
+<body>
+    <header>
+        <img src="../img/logo.svg" alt="Logo Hotel Terracota">
+        <h1>Hotel Terracota</h1>
+        <p id="fecha-hora">Jueves 5 de noviembre de 2026 - 08:30 hs</p>
+        <form id="buscador" action="../publico/resultados.html" method="get" accept-charset="UTF-8">
+            <input id="criterio" name="criterio" type="text" class="campos" placeholder="buscar en el sitio">
+            <input type="submit" value="Buscar" class="botones botonEnviar">
+        </form>
+    </header>
+
+    <nav id="menu-global">
+        <a href="../index.html">Inicio</a>
+        <a href="../publico/institucional.html">Institucional</a>
+        <a href="../cliente/apartamentos.html">Apartamentos</a>
+        <a href="../cliente/servicios.html">Servicios</a>
+        <a href="../publico/contacto.html">Contacto</a>
+        <a href="../publico/acceso.html">Iniciar sesión</a>
+    </nav>
+
+    <main>
+        <nav id="menu-vertical">
+            <p><b>Sitio público</b></p>
+            <ul>
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="institucional.html">Institucional</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+                <li><a href="acceso.html">Iniciar sesión</a></li>
+                <li><a href="registro.html">Registrarse</a></li>
+            </ul>
+        </nav>
+
+        <div id="contenido">
+            <nav id="ruta">
+                <a href="../index.html">Inicio</a> &gt; Iniciar sesión
+            </nav>
+
+            <h2>Iniciar sesión</h2>
+
+            <section id="formulario-acceso">
+                <h3>Ingresá con tu usuario</h3>
+                <form id="acceso" name="acceso" action="../index.html" accept-charset="UTF-8" method="post">
+                    <p class="nombresCampos">
+                        <label for="usuario">Nombre de usuario *</label>
+                        <input id="usuario" name="usuario" type="text" required minlength="4" maxlength="20" class="campos">
+                    </p>
+                    <p class="nombresCampos">
+                        <label for="clave">Clave *</label>
+                        <input id="clave" name="clave" type="password" required minlength="8" class="campos">
+                    </p>
+                    <p>
+                        <input type="submit" value="Ingresar" class="botones botonEnviar">
+                    </p>
+                </form>
+                <p>Nota: (*) dato obligatorio</p>
+                <p><a href="recuperar-clave.html">¿Olvidaste tu clave? Recuperala acá</a></p>
+                <p>¿No tenés cuenta? <a href="registro.html">Registrate</a></p>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <address>
+            <p>Dirección: Calle Ejemplo 123, San Fernando del Valle de Catamarca, Catamarca</p>
+            <p>Teléfono: 383 400-0000 - Email: info@hotelterracota.com.ar</p>
+            <p>Redes sociales: <a href="#">Facebook</a> - <a href="#">Instagram</a></p>
+            <p>Todos los derechos reservados a Hotel Terracota</p>
+        </address>
+    </footer>
+</body>
+
+</html>

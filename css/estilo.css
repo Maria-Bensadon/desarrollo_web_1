@@ -51,28 +51,24 @@ header h1 {
     text-decoration: underline;
 }
 
-main {
-    max-width: 960px;
-    margin: 0 auto;
-    padding: 20px;
-}
-
 #ruta {
     font-size: 14px;
     margin-bottom: 10px;
 }
 
-#ruta a+a::before,
-#ruta a+a {
-    margin-left: 5px;
-}
-
+ 
 #indice {
     margin-bottom: 20px;
 }
-
+ 
 #indice a {
     margin-right: 12px;
+}
+
+main {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 20px;
 }
 
 section {
@@ -98,7 +94,7 @@ footer {
     background-color: #3b2a22;
     color: #ffffff;
     text-align: center;
-    padding: 15px;
+    padding: 50px;
 }
 
 /* ===== Tablas ===== */
@@ -119,41 +115,151 @@ th {
 }
 
 /* ===== Formularios ===== */
+form {
+    padding-inline: 50px;
+}
+
+.nombresCampos {
+    margin-inline: 2px;
+}
+
 label {
     font-weight: bold;
-    display: inline-block;
-    min-width: 160px;
     margin-bottom: 10px;
 }
 
-input[type="text"],
-input[type="email"],
-input[type="password"],
-input[type="number"],
-input[type="date"],
-select,
-textarea {
+.campos {
     padding: 6px;
     border: 1px solid #c9b3a3;
     border-radius: 4px;
+    width: 250px;
+    margin-left: 10px;
 }
 
-input[type="submit"],
-input[type="reset"],
-button {
-    background-color: #b5543a;
+.inputFecha {
+    padding: 6px;
+    border: 1px solid #c9b3a3;
+    border-radius: 4px;
+    margin-left: 10px;
+}
+
+fieldset {
+    border: 1px solid #e3cfc0;
+}
+
+.botones {
     color: #ffffff;
     border: none;
     border-radius: 4px;
     padding: 8px 16px;
     cursor: pointer;
+    margin-inline: 2px;
 }
 
-input[type="reset"] {
-    background-color: #8a7a70;
+.botonEnviar {
+    background-color: #b5543a;
 }
 
-fieldset {
+.botonEnviar:hover{
+     background-color: #db613f;
+     border: #66341f 2px solid ;
+}
+
+.botonBorrar {
+    background-color: #83614c;
+}
+
+.botonBorrar:hover{
+     background-color:  #b7835e;
+     border: #705042 2px solid ;
+}
+
+
+/* ===== Encabezado: logo, titulo, fecha y hora, buscador ===== */
+header img {
+    width: 60px;
+    height: 60px;
+}
+
+#fecha-hora {
+    color: #ffffff;
+    font-size: 14px;
+}
+
+#buscador {
+    padding-inline: 0;
+}
+
+#buscador .campos {
+    width: 180px;
+}
+
+/* ===== Menu vertical (sistema de gestion) ===== */
+#menu-vertical {
+    float: left;
+    width: 160px;
+    background-color: #ffffff;
     border: 1px solid #e3cfc0;
-    margin-bottom: 15px;
+    border-radius: 6px;
+    padding: 15px 20px;
+}
+
+#menu-vertical p {
+    margin-top: 0;
+    color: #8c3b24;
+}
+
+#menu-vertical ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+#menu-vertical li {
+    margin-bottom: 8px;
+}
+
+#menu-vertical a {
+    text-decoration: none;
+}
+
+#menu-vertical a:hover {
+    text-decoration: underline;
+}
+
+#contenido {
+    margin-left: 240px;
+}
+
+footer {
+    clear: both;
+}
+
+/* ===== Listados, detalle y paginado ===== */
+#paginado {
+    margin-top: 15px;
+    text-align: center;
+}
+
+#paginado a {
+    margin: 0 4px;
+}
+
+.tablaDetalle th {
+    width: 30%;
+}
+
+.campos:disabled {
+    background-color: #eee6df;
+    color: #8a7a70;
+}
+
+textarea.campos {
+    font-family: inherit;
+    width: 350px;
+}
+
+fieldset legend {
+    font-weight: bold;
+    color: #8c3b24;
 }

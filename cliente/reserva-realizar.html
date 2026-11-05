@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="../css/estilo.css">
 </head>
 
+<!-- Gaby Centeno -->
 <body>
     <header>
         <h1>Hotel Terracota</h1>
@@ -26,7 +27,7 @@
 
     <main>
         <nav id="ruta">
-            <a href="../index.html">Inicio</a>
+            <a href="../index.html">ingreso</a>
             <a href="reservas.html">Reservas</a>
             <a>Realizar reserva</a>
         </nav>
@@ -39,10 +40,67 @@
              tipo de apartamento (select), fecha de ingreso y de salida (date), 
              cantidad de personas (number), observaciones (textarea), botones Borrar y Enviar. 
              Cada input con su propio name e id, y el label con for igual al id -->
-            
-            
-        
-            </section>
+
+            <div>
+                <form action="" accept-charset="UTF-8" method="post">
+                    <fieldset>
+                        <legend>Datos Personales</legend>
+                        <p class="nombresCampos">
+                            <label for="nombres">Nombres *</label>
+                            <input id="nombres" name="nombres" type="text" required minlength="3" maxlength="32"
+                                placeholder="escriba su nombre completo" class="campos">
+                        </p>
+                        <p class="nombresCampos">
+                            <label for="apellidos">Apellidos *</label>
+                            <input id="apellidos" name="apellidos" type="text" required minlength="3" maxlength="32"
+                                placeholder="escriba su apellido completo" class="campos">
+                        </p>
+                        <p class="nombresCampos">
+                            <label for="email">Email *</label>
+                            <input id="email" name="email" type="email" required placeholder="ingrese su mail"
+                                class="campos">
+                        </p>
+                    </fieldset>
+                    <br>
+                    <fieldset>
+                        <legend>Datos de la Estadía</legend>
+                        <p class="nombresCampos">
+                            <label for="tipo_departamento">Elija el tipo de departamento</label>
+                            <select id="tipo_departamento" name="tipo_departamento" required class="campos">
+                                <option value="1">Studio Matrimonial</option>
+                                <option value="2">Departamento Concept Doble</option>
+                                <option value="3">Departamento Concept Triple</option>
+                                <option value="4">Departamento Concept Cuádruple</option>
+                            </select>
+                        </p>
+                        <p class="nombresCampos">
+                            <label for="fecha_ingreso">Fecha de Ingreso</label>
+                            <input id="fecha_ingreso" name="fecha_ingreso" type="date" class="inputFecha" required>
+                        </p>
+                        <p class="nombresCampos">
+                            <label for="fecha_salida">Fecha de Salida</label>
+                            <input id="fecha_salida" name="fecha_salida" type="date" class="inputFecha" required>
+                        </p>
+                        <p class="nombresCampos">
+                            <label for="cantidad">Cantidad de Personas</label>
+                            <input id="cantidad" name="cantidad" type="number" min="1" class="inputFecha" required
+                                class="campos">
+                        </p>
+                        <p class="nombresCampos">
+                            <label for="notas">Observaciones</label>
+                            <textarea id="notas" name="notas" rows="3" class="campos"></textarea>
+                        </p>
+                    </fieldset>
+                    <br>
+                    <p>
+                        <input type="submit" value="Enviar" class="botones botonEnviar">
+                        <input type="reset" value="Borrar" class="botones botonBorrar">
+                    </p>
+
+                </form>
+            </div>
+
+        </section>
 
     </main>
 

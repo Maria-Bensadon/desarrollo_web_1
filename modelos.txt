@@ -1,0 +1,238 @@
+=====================================================================
+MODELOS DE BLOQUES PARA COPIAR DENTRO DE <div id="contenido">
+(todos usan las clases y ids que ya existen en estilo.css)
+=====================================================================
+
+
+---------------------------------------------------------------------
+1) MODELO DE INFORMACION (texto con secciones y articulos)
+---------------------------------------------------------------------
+<section id="nombre-seccion">
+    <h3>Título de la sección</h3>
+    <p>Texto de la sección.</p>
+
+    <article>
+        <h4>Título del artículo</h4>
+        <p>Texto del artículo.</p>
+        <a href="#">Leer más..</a>
+    </article>
+
+    <article>
+        <h4>Título del artículo</h4>
+        <p>Texto del artículo.</p>
+        <a href="#">Leer más..</a>
+    </article>
+</section>
+
+
+---------------------------------------------------------------------
+2) MODELO DE FORMULARIO (registrar / editar)
+   - Registrar: sin value. Editar: con value="..." y disabled en los campos que no se modifican.
+---------------------------------------------------------------------
+<section id="formulario-entidad">
+    <h3>Datos de la entidad</h3>
+    <form id="entidad-registrar" name="entidad-registrar" action="listado.html" accept-charset="UTF-8" method="post">
+        <fieldset>
+            <legend>Grupo de datos</legend>
+            <p class="nombresCampos">
+                <label for="texto">Campo de texto *</label>
+                <input id="texto" name="texto" type="text" required minlength="3" maxlength="32" placeholder="ayuda" class="campos">
+            </p>
+            <p class="nombresCampos">
+                <label for="numero">Campo numérico *</label>
+                <input id="numero" name="numero" type="number" required min="1" class="campos">
+            </p>
+            <p class="nombresCampos">
+                <label for="fecha">Fecha *</label>
+                <input id="fecha" name="fecha" type="date" required class="campos">
+            </p>
+            <p class="nombresCampos">
+                <label for="correo">Email *</label>
+                <input id="correo" name="correo" type="email" required class="campos">
+            </p>
+            <p class="nombresCampos">
+                <label for="opcion">Lista de opciones *</label>
+                <select id="opcion" name="opcion" required class="campos">
+                    <option value="uno">Opción uno</option>
+                    <option value="dos">Opción dos</option>
+                </select>
+            </p>
+            <p class="nombresCampos">
+                <label for="descripcion">Descripción</label>
+                <textarea id="descripcion" name="descripcion" rows="3" maxlength="200" class="campos"></textarea>
+            </p>
+            <p class="nombresCampos">
+                <label for="imagen">Imagen</label>
+                <input id="imagen" name="imagen" type="file" accept="image/*" class="campos">
+            </p>
+        </fieldset>
+        <br>
+        <p>
+            <input type="submit" value="Registrar" class="botones botonEnviar">
+            <input type="reset" value="Borrar" class="botones botonBorrar">
+        </p>
+    </form>
+    <p>Nota: (*) dato obligatorio</p>
+</section>
+
+
+---------------------------------------------------------------------
+3) MODELO DE LISTADO (buscador + botón nuevo + tabla + paginado)
+---------------------------------------------------------------------
+<section id="buscar">
+    <h3>Buscar</h3>
+    <form id="buscar-entidad" name="buscar-entidad" action="listado.html" accept-charset="UTF-8" method="get">
+        <p class="nombresCampos">
+            <label for="buscar_texto">Criterio de búsqueda</label>
+            <input id="buscar_texto" name="buscar_texto" type="text" class="campos">
+        </p>
+        <p>
+            <input type="submit" value="Buscar" class="botones botonEnviar">
+        </p>
+    </form>
+    <form action="entidad-registrar.html" method="get">
+        <p>
+            <input type="submit" value="Registrar nuevo" class="botones botonEnviar">
+        </p>
+    </form>
+</section>
+
+<section id="listado">
+    <h3>Listado</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Columna 1</th>
+                <th>Columna 2</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Dato 1</td>
+                <td>Dato 2</td>
+                <td>
+                    <a href="entidad-detalle.html"><img src="../img/ver.svg" alt="Ver detalle" width="20" height="20"></a>
+                    <a href="entidad-editar.html"><img src="../img/editar.svg" alt="Editar" width="20" height="20"></a>
+                    <a href="listado.html"><img src="../img/eliminar.svg" alt="Eliminar" width="20" height="20"></a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <nav id="paginado">
+        <a href="listado.html">Primera</a>
+        <a href="listado.html">Anterior</a>
+        <a href="listado.html">1</a>
+        <a href="listado.html">2</a>
+        <a href="listado.html">Siguiente</a>
+        <a href="listado.html">Última</a>
+    </nav>
+</section>
+
+
+---------------------------------------------------------------------
+4) MODELO DE DETALLE (tabla de datos + botones)
+---------------------------------------------------------------------
+<section id="detalle-entidad">
+    <h3>Datos de la entidad</h3>
+    <table class="tablaDetalle">
+        <tr>
+            <th>Campo 1</th>
+            <td>Valor 1</td>
+        </tr>
+        <tr>
+            <th>Campo 2</th>
+            <td>Valor 2</td>
+        </tr>
+        <tr>
+            <th>Imagen</th>
+            <td><img src="../img/perfil.svg" alt="Descripción de la imagen" width="80" height="80"></td>
+        </tr>
+    </table>
+    <form method="get">
+        <p>
+            <input type="submit" value="Volver al listado" formaction="listado.html" class="botones botonBorrar">
+            <input type="submit" value="Editar" formaction="entidad-editar.html" class="botones botonEnviar">
+            <input type="submit" value="Eliminar" formaction="listado.html" class="botones botonBorrar">
+        </p>
+    </form>
+</section>
+
+
+---------------------------------------------------------------------
+5) MODELO DE GALERIA DE IMAGENES (cada imagen con su título y descripción)
+---------------------------------------------------------------------
+<section id="galeria">
+    <h3>Galería de imágenes</h3>
+
+    <article>
+        <img src="../img/nombre-imagen-1.jpg" alt="Descripción de la imagen 1" width="300">
+        <h4>Título de la imagen 1</h4>
+        <p>Descripción breve de la imagen.</p>
+    </article>
+
+    <article>
+        <img src="../img/nombre-imagen-2.jpg" alt="Descripción de la imagen 2" width="300">
+        <h4>Título de la imagen 2</h4>
+        <p>Descripción breve de la imagen.</p>
+    </article>
+
+    <article>
+        <img src="../img/nombre-imagen-3.jpg" alt="Descripción de la imagen 3" width="300">
+        <h4>Título de la imagen 3</h4>
+        <p>Descripción breve de la imagen.</p>
+    </article>
+</section>
+
+
+---------------------------------------------------------------------
+6) MODELO DE CATALOGO (productos o servicios con imagen, texto y precio)
+---------------------------------------------------------------------
+<section id="catalogo">
+    <h3>Catálogo de servicios</h3>
+
+    <article>
+        <img src="../img/nombre-imagen.jpg" alt="Descripción de la imagen" width="200">
+        <h4>Nombre del servicio o apartamento</h4>
+        <p>Descripción y características.</p>
+        <p><b>Precio:</b> $0</p>
+        <a href="detalle.html">Ver detalle</a>
+    </article>
+
+    <article>
+        <img src="../img/nombre-imagen.jpg" alt="Descripción de la imagen" width="200">
+        <h4>Nombre del servicio o apartamento</h4>
+        <p>Descripción y características.</p>
+        <p><b>Precio:</b> $0</p>
+        <a href="detalle.html">Ver detalle</a>
+    </article>
+</section>
+
+
+---------------------------------------------------------------------
+7) MODELO DE RESULTADOS DE BUSQUEDA (publico/resultados.html)
+---------------------------------------------------------------------
+<section id="resultados">
+    <h3>Resultados de la búsqueda</h3>
+    <p>Criterio buscado: <b>texto buscado</b></p>
+    <p>Cantidad de resultados encontrados: <b>3</b></p>
+
+    <article>
+        <h4><a href="pagina.html">Título del contenido encontrado</a></h4>
+        <p>Fragmento del contenido.</p>
+    </article>
+
+    <article>
+        <h4><a href="pagina.html">Título del contenido encontrado</a></h4>
+        <p>Fragmento del contenido.</p>
+    </article>
+
+    <nav id="paginado">
+        <a href="resultados.html">Primera</a>
+        <a href="resultados.html">Anterior</a>
+        <a href="resultados.html">1</a>
+        <a href="resultados.html">2</a>
+        <a href="resultados.html">Siguiente</a>
+        <a href="resultados.html">Última</a>
+    </nav>
+</section>

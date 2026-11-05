@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registro de usuario - Hotel Terracota</title>
+  <link rel="stylesheet" href="../css/estilo.css">
+</head>
+
+<body>
+  <header>
+    <img src="../img/logo.svg" alt="Logo Hotel Terracota">
+    <h1>Hotel Terracota</h1>
+    <p id="fecha-hora">Jueves 5 de noviembre de 2026 - 08:30 hs</p>
+    <form id="buscador" action="../publico/resultados.html" method="get" accept-charset="UTF-8">
+      <input id="criterio" name="criterio" type="text" class="campos" placeholder="buscar en el sitio">
+      <input type="submit" value="Buscar" class="botones botonEnviar">
+    </form>
+  </header>
+
+  <nav id="menu-global">
+    <a href="../index.html">Inicio</a>
+    <a href="../publico/institucional.html">Institucional</a>
+    <a href="../cliente/apartamentos.html">Apartamentos</a>
+    <a href="../cliente/servicios.html">Servicios</a>
+    <a href="../publico/contacto.html">Contacto</a>
+    <a href="../publico/acceso.html">Iniciar sesión</a>
+  </nav>
+
+  <main>
+    <nav id="menu-vertical">
+      <p><b>Sitio público</b></p>
+      <ul>
+        <li><a href="../index.html">Inicio</a></li>
+        <li><a href="institucional.html">Institucional</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+        <li><a href="acceso.html">Iniciar sesión</a></li>
+        <li><a href="registro.html">Registrarse</a></li>
+      </ul>
+    </nav>
+
+    <div id="contenido">
+      <nav id="ruta">
+        <a href="../index.html">Inicio</a> &gt; Registro de usuario
+      </nav>
+
+      <h2>Registro de usuario</h2>
+
+      <section id="formulario-registro">
+        <h3>Completá tus datos</h3>
+        <form id="registro" name="registro" action="acceso.html" accept-charset="UTF-8" method="post">
+          <fieldset>
+            <legend>Datos personales</legend>
+            <p class="nombresCampos">
+              <label for="nombres">Nombres *</label>
+              <input id="nombres" name="nombres" type="text" required placeholder="escriba sus nombres" minlength="3"
+                maxlength="32" class="campos">
+            </p>
+            <p class="nombresCampos">
+              <label for="apellidos">Apellidos *</label>
+              <input id="apellidos" name="apellidos" type="text" required placeholder="escriba sus apellidos"
+                minlength="3" maxlength="32" class="campos">
+            </p>
+            <p class="nombresCampos">
+              <label for="dni">DNI *</label>
+              <input id="dni" name="dni" type="text" required placeholder="solo números" minlength="7" maxlength="8"
+                class="campos">
+            </p>
+            <p class="nombresCampos">
+              <label for="genero">Género *</label>
+              <select id="genero" name="genero" required class="campos">
+                <option value="femenino">Femenino</option>
+                <option value="masculino">Masculino</option>
+                <option value="otro">Otro</option>
+                <option value="sin-datos">Prefiero no decirlo</option>
+              </select>
+            </p>
+            <p class="nombresCampos">
+              <label for="fecha_nacimiento">Fecha de nacimiento *</label>
+              <input id="fecha_nacimiento" name="fecha_nacimiento" type="date" required class="campos">
+            </p>
+          </fieldset>
+          <br>
+          <fieldset>
+            <legend>Domicilio</legend>
+            <p class="nombresCampos">
+              <label for="calle">Calle *</label>
+              <input id="calle" name="calle" type="text" required class="campos">
+            </p>
+            <p class="nombresCampos">
+              <label for="altura">Altura *</label>
+              <input id="altura" name="altura" type="number" required min="1" class="campos">
+            </p>
+            <p class="nombresCampos">
+              <label for="departamento">Departamento</label>
+              <input id="departamento" name="departamento" type="text" class="campos">
+            </p>
+            <p class="nombresCampos">
+              <label for="municipio">Municipio *</label>
+              <input id="municipio" name="municipio" type="text" required class="campos">
+            </p>
+            <p class="nombresCampos">
+              <label for="provincia">Provincia *</label>
+              <select id="provincia" name="provincia" required class="campos">
+                <option value="catamarca">Catamarca</option>
+                <option value="cordoba">Córdoba</option>
+                <option value="salta">Salta</option>
+                <option value="tucuman">Tucumán</option>
+                <option value="otra">Otra</option>
+              </select>
+            </p>
+            <p class="nombresCampos">
+              <label for="pais">País *</label>
+              <input id="pais" name="pais" type="text" required value="Argentina" class="campos">
+            </p>
+            <p>Mapa</p>
+            <iframe title="Mapa de ubicación" width="100%" height="250"
+              src="https://www.openstreetmap.org/export/embed.html?bbox=-65.79%2C-28.48%2C-65.76%2C-28.46&amp;layer=mapnik"></iframe>
+          </fieldset>
+          <br>
+          <fieldset>
+            <legend>Datos de acceso</legend>
+            <p class="nombresCampos">
+              <label for="usuario">Nombre de usuario *</label>
+              <input id="usuario" name="usuario" type="text" required minlength="4" maxlength="20" class="campos">
+            </p>
+            <p class="nombresCampos">
+              <label for="clave">Clave *</label>
+              <input id="clave" name="clave" type="password" required minlength="8" class="campos">
+            </p>
+            <p class="nombresCampos">
+              <label for="rol">Tipo de usuario *</label>
+              <select id="rol" name="rol" required class="campos">
+                <option value="cliente">Cliente</option>
+              </select>
+            </p>
+            <p class="nombresCampos">
+              <label for="email">Email *</label>
+              <input id="email" name="email" type="email" required placeholder="ingrese su mail" class="campos">
+            </p>
+            <p class="nombresCampos">
+              <label for="imagen">Imagen de perfil</label>
+              <input id="imagen" name="imagen" type="file" accept="image/*" class="campos">
+            </p>
+          </fieldset>
+          <br>
+          <p>
+            <input type="submit" value="Registrarme" class="botones botonEnviar">
+            <input type="reset" value="Borrar" class="botones botonBorrar">
+          </p>
+        </form>
+        <p>Nota: (*) dato obligatorio</p>
+        <p>¿Ya tenés cuenta? <a href="acceso.html">Iniciá sesión</a></p>
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    <address>
+      <p>Dirección: Calle Ejemplo 123, San Fernando del Valle de Catamarca, Catamarca</p>
+      <p>Teléfono: 383 400-0000 - Email: info@hotelterracota.com.ar</p>
+      <p>Redes sociales: <a href="#">Facebook</a> - <a href="#">Instagram</a></p>
+      <p>Todos los derechos reservados a Hotel Terracota</p>
+    </address>
+  </footer>
+</body>
+
+</html>

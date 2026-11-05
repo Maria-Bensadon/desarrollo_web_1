@@ -10,58 +10,83 @@
 
 <body>
     <header>
+        <img src="img/logo.svg" alt="Logo Hotel Terracota">
         <h1>Hotel Terracota</h1>
+        <p id="fecha-hora">Jueves 5 de noviembre de 2026 - 08:30 hs</p>
+        <form id="buscador" action="publico/resultados.html" method="get" accept-charset="UTF-8">
+            <input id="criterio" name="criterio" type="text" class="campos" placeholder="buscar en el sitio">
+            <input type="submit" value="Buscar" class="botones botonEnviar">
+        </form>
     </header>
 
     <nav id="menu-global">
         <a href="index.html">Inicio</a>
+        <a href="publico/institucional.html">Institucional</a>
         <a href="cliente/apartamentos.html">Apartamentos</a>
-        <a href="cliente/reservas.html">Reservas</a>
         <a href="cliente/servicios.html">Servicios</a>
-        <a href="cliente/resena.html">Reseñas</a>
-        <a href="institucional.html">Institucional</a>
-        <a href="contacto.html">Contacto</a>
-        <a href="acceso.html">Iniciar sesión</a>
+        <a href="publico/contacto.html">Contacto</a>
+        <a href="publico/acceso.html">Iniciar sesión</a>
     </nav>
 
     <main>
-        
-        <h2>Bienvenidos</h2>
+        <nav id="menu-vertical">
+            <p><b>Sitio público</b></p>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="publico/institucional.html">Institucional</a></li>
+                <li><a href="publico/contacto.html">Contacto</a></li>
+                <li><a href="publico/acceso.html">Iniciar sesión</a></li>
+                <li><a href="publico/registro.html">Registrarse</a></li>
+            </ul>
+        </nav>
 
-        <section id="presentacion">
-            <h3>Hotel Terracota</h3>
-            <p>ApartHotel en San Fernando del Valle de Catamarca. Apartamentos equipados para estadías cortas y
-                largas, con atención personalizada y servicios incluidos.</p>
-            <p><a href="cliente/apartamentos.html">Ver apartamentos</a> -
-                <a href="cliente/reserva-realizar.html">Realizar una reserva</a>
-            </p>
-        </section>
+        <div id="contenido">
+            <nav id="ruta">
+                Inicio
+            </nav>
 
-        <section id="novedades">
-            <h3>Novedades</h3>
+            <h2>Bienvenidos</h2>
 
-            <article>
-                <h4>Promoción de temporada</h4>
-                <p>Descuento en estadías de siete noches o más. Consultá condiciones al reservar.</p>
-                <a href="institucional.html">Leer más..</a>
-            </article>
+            <section id="presentacion">
+                <h3>Hotel Terracota</h3>
+                <p>ApartHotel en San Fernando del Valle de Catamarca. Apartamentos equipados para estadías cortas y
+                    largas, con atención personalizada y servicios incluidos.</p>
+                <p><a href="cliente/apartamentos.html">Ver apartamentos</a> -
+                    <a href="cliente/reserva-realizar.html">Realizar una reserva</a>
+                </p>
+            </section>
 
-            <article>
-                <h4>Actividades turísticas cercanas</h4>
-                <p>Paseos y propuestas culturales en la ciudad y alrededores para completar tu estadía.</p>
-                <a href="institucional.html">Leer más..</a>
-            </article>
+            <section id="novedades">
+                <h3>Novedades</h3>
 
-            <article>
-                <h4>Eventos</h4>
-                <p>Información sobre eventos y fechas con mayor demanda en la ciudad.</p>
-                <a href="institucional.html">Leer más..</a>
-            </article>
-        </section>
+                <article>
+                    <h4>Promoción de temporada</h4>
+                    <p>Descuento en estadías de siete noches o más. Consultá condiciones al reservar.</p>
+                    <a href="publico/institucional.html">Leer más..</a>
+                </article>
+
+                <article>
+                    <h4>Actividades turísticas cercanas</h4>
+                    <p>Paseos y propuestas culturales en la ciudad y alrededores para completar tu estadía.</p>
+                    <a href="publico/institucional.html">Leer más..</a>
+                </article>
+
+                <article>
+                    <h4>Eventos</h4>
+                    <p>Información sobre eventos y fechas con mayor demanda en la ciudad.</p>
+                    <a href="publico/institucional.html">Leer más..</a>
+                </article>
+            </section>
+        </div>
     </main>
 
     <footer>
-        <address>Todos los derechos reservados</address>
+        <address>
+            <p>Dirección: Calle Ejemplo 123, San Fernando del Valle de Catamarca, Catamarca</p>
+            <p>Teléfono: 383 400-0000 - Email: info@hotelterracota.com.ar</p>
+            <p>Redes sociales: <a href="#">Facebook</a> - <a href="#">Instagram</a></p>
+            <p>Todos los derechos reservados a Hotel Terracota</p>
+        </address>
     </footer>
 </body>
 

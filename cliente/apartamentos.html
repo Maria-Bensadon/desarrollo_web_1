@@ -7,8 +7,8 @@
     <title>Apartamentos - Hotel Terracota</title>
     <link rel="stylesheet" href="../css/estilo.css">
 </head>
+<!-- Bazan Lourdes -->
 
-<!---- Nombre:  ---->
 <body>
     <header>
         <h1>Hotel Terracota</h1>
@@ -27,7 +27,7 @@
 
     <main>
         <nav id="ruta">
-            <a href="../index.html">Inicio</a>
+            <a href="../index.html">Inicio > </a>
             <a>Apartamentos</a>
         </nav>
 
@@ -41,16 +41,71 @@
             <a href="#disponibilidad">Disponibilidad</a>
         </nav>
 
+        <p>Conocé los apartamentos del Hotel Terracota, sus características, comodidades y tarifas. Consultá la disponibilidad
+        y elegí el que mejor se adapte a tu estadía.</p>
+
         <section id="tipos">
             <h3>Tipos de apartamentos</h3>
-            <!-- un article por tipo: h4 con el nombre, p con la descripción, img -->
+            
+            <article>
+                <h4>Studio Matrimonial</h4>
+                <img src="" alt="Studio con cama matrimonial, kitchenette y baño privado">
+                <p>Ambiente único con cama matrimonial, kitchenette y baño privado. Ideal para parejas o viajes de trabajo.</p>
+                <p><b>Capacidad:</b> 2 personas</p>
+                <a href="reserva-realizar.html">Reservar</a>
+            </article>
+
+            <article>
+                <h4>Departamento Concept Doble</h4>
+                <img src="" alt="Departamento con dormitorio de cama matrimonial, living y cocina">
+                <p>Dormitorio independiente con cama matrimonial o dos camas individuales, living comedor y cocina equipada.</p>
+                <p><b>Capacidad:</b> 2 personas</p>
+                <a href="reserva-realizar.html">Reservar</a>
+            </article>
+
+            <article>
+                <h4>Departamento Concept Triple</h4>
+                <img src="" alt="Departamento con cama matrimonial y cama individual, living y cocina">
+                <p>Dormitorio con cama matrimonial y una cama individual, living comedor y cocina equipada. Pensado para familias pequeñas
+                o grupos de amigos.</p>
+                <p><b>Capacidad:</b> 3 personas</p>
+                <a href="reserva-realizar.html">Reservar</a>
+            </article>
+
+            <article>
+                <h4>Departamento Concept Cuádruple</h4>
+                <img src="" alt="Departamento de dos dormitorios con living, cocina y balcón">
+                <p>Dos dormitorios, living comedor, cocina completa y balcón. Perfecto para familias o grupos.</p>
+                <p><b>Capacidad:</b> 4 personas</p>
+                <a href="reserva-realizar.html">Reservar</a>
+            </article>
         </section>
 
         <section id="comodidades">
             <h3>Características y comodidades</h3>
+
             <!-- ul con li por cada característica o comodidad -->
+
+             <h4>En cada apartamento</h4>
+            <ul>
+                <li>Wifi</li>
+                <li>Minibar</li>
+                <li>Artículos de aseo personal</li>
+                <li>Servicio de limpieza</li>
+                <li>Servicio al cuarto</li>
+            </ul>
+
+            <h4>En el edificio</h4>
+            <ul>
+                <li>Recepción</li>
+                <li>Estacionamiento</li>
+                <li>Ascensor</li>
+                <li>Comedor</li>
+                <li>Servicio de lavandería</li>
+            </ul>
         </section>
 
+        <!--Faltan agregar las imagenes-->
         <section id="galeria">
             <h3>Galería de fotos</h3>
             <!-- varias img con alt -->
@@ -58,14 +113,124 @@
 
         <section id="tarifas">
             <h3>Tarifas</h3>
-            <!-- table con thead (tipo, precio por noche, temporada) y tbody -->
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Tipo</th>
+                        <th>Precio por noche</th>
+                        <th>Temporada</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Studio Matrimonial</td>
+                        <td>$45.000</td>
+                        <td>Baja</td>
+                    </tr>
+                    <tr>
+                        <td>Studio Matrimonial</td>
+                        <td>$55.000</td>
+                        <td>Alta</td>
+                    </tr>
+                    <tr>
+                        <td>Departamento Concept Doble</td>
+                        <td>$60.000</td>
+                        <td>Baja</td>
+                    </tr>
+                    <tr>
+                        <td>Departamento Concept Doble</td>
+                        <td>$72.000</td>
+                        <td>Alta</td>
+                    </tr>
+                    <tr>
+                        <td>Departamento Concept Triple</td>
+                        <td>$75.000</td>
+                        <td>Baja</td>
+                    </tr>
+                    <tr>
+                        <td>Departamento Concept Triple</td>
+                        <td>$90.000</td>
+                        <td>Alta</td>
+                    </tr>
+                    <tr>
+                        <td>Departamento Concept Cuádruple</td>
+                        <td>$90.000</td>
+                        <td>Baja</td>
+                    </tr>
+                    <tr>
+                        <td>Departamento Concept Cuádruple</td>
+                        <td>$108.000</td>
+                        <td>Alta</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p>Temporada alta: enero, febrero, julio y fines de semana largos.</p>
         </section>
 
         <section id="disponibilidad">
             <h3>Disponibilidad</h3>
-            <!-- form con fecha de ingreso, fecha de salida, cantidad de personas y botón Consultar; debajo, el resultado de ejemplo -->
-        </section>
 
+            <!-- form con fecha de ingreso, fecha de salida, cantidad de personas y botón Consultar; debajo, el resultado de ejemplo -->
+
+           <div>
+                <form action="" id="disponibilidad-consultar" name="disponibilidad-consultar" accept-charset="UTF-8" method="post">
+                    <fieldset>
+                        <legend>Datos de la Estadía</legend>
+                        <p>
+                            <label for="fecha_ingreso">Fecha de Ingreso *</label>
+                            <input id="fecha_ingreso" name="fecha_ingreso" type="date" required>
+                        </p>
+                        <p>
+                            <label for="fecha_salida">Fecha de Salida *</label>
+                            <input id="fecha_salida" name="fecha_salida" type="date" required>
+                        </p>
+                        <p>
+                            <label for="cantidad">Cantidad de Personas *</label>
+                            <input id="cantidad" name="cantidad" type="number" min="1" max="4" required>
+                        </p>
+                    </fieldset>
+                    <input type="submit" value="Consultar">
+                    <input type="reset" value="Borrar">
+                </form>
+                <p>Nota: (*) dato obligatorio</p>
+            </div>
+
+            <!--Resultado en modo de ejemplo, ya que el boton consultar no tiene funcionalidad-->
+           <h4 id="resultado">Resultado de la consulta</h4>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Tipo</th>
+                        <th>Estado</th>
+                        <th>Acción</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Studio Matrimonial</td>
+                        <td>Disponible</td>
+                        <td><a href="reserva-realizar.html">Reservar</a></td>
+                    </tr>
+                    <tr>
+                        <td>Departamento Concept Doble</td>
+                        <td>Disponible</td>
+                        <td><a href="reserva-realizar.html">Reservar</a></td>
+                    </tr>
+                    <tr>
+                        <td>Departamento Concept Triple</td>
+                        <td>No disponible</td>
+                        <td>-</td>
+                    </tr>
+                    <tr>
+                        <td>Departamento Concept Cuádruple</td>
+                        <td>Disponible</td>
+                        <td><a href="reserva-realizar.html">Reservar</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        <p><a href="#indice">Volver arriba</a></p>
     </main>
 
     <footer>

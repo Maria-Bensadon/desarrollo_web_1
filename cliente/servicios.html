@@ -7,7 +7,7 @@
     <title>Servicios - Hotel Terracota</title>
     <link rel="stylesheet" href="../css/estilo.css">
 </head>
-
+<!-- Bazan Lourdes -->
 <body>
     <header>
         <h1>Hotel Terracota</h1>
@@ -34,17 +34,102 @@
 
         <section id="limpieza">
             <h3>Servicio de limpieza</h3>
+
             <!-- p con la descripción del servicio, horarios y un enlace o botón para solicitarlo -->
+            <p>La limpieza diaria está incluida en la tarifa de todos los departamentos. Incluye tendido de camas,
+            cambio de toallas, reposición de artículos de aseo personal y limpieza del baño y la cocina.</p>
+            <p>Horario: todos los días de 9:00 a 13:00. Si necesitás la limpieza en otro momento o una limpieza adicional,
+            podés solicitarla con el siguiente formulario</p>
+
+            <div>
+                <form action="" accept-charset="UTF-8" method="post">
+                    <fieldset>
+                        <legend>Solicitar limpieza</legend>
+                        <p>
+                            <label for="codigo_limpieza">Código de reserva *</label>
+                            <input id="codigo_limpieza" name="codigo_limpieza" type="text" required minlength="6"
+                                maxlength="12" placeholder="ej: TER-00125">
+                        </p>
+                        <p>
+                            <label for="fecha_limpieza">Fecha *</label>
+                            <input id="fecha_limpieza" name="fecha_limpieza" type="date" required>
+                        </p>
+                        <p>
+                            <label for="horario_limpieza">Horario preferido *</label>
+                            <select id="horario_limpieza" name="horario_limpieza" required>
+                                <option value="1">9:00 a 11:00</option>
+                                <option value="2">11:00 a 13:00</option>
+                                <option value="3">15:00 a 17:00 (adicional)</option>
+                            </select>
+                        </p>
+                        <p>
+                            <label for="notas_limpieza">Observaciones</label>
+                            <textarea id="notas_limpieza" name="notas_limpieza" rows="3"
+                            placeholder="ej: cambio de sábanas, toallas extra">
+                            </textarea>
+                        </p>
+                    </fieldset>
+                    <input type="submit" value="Solicitar">
+                    <input type="reset" value="Borrar">
+                </form>
+            </div>
         </section>
 
         <section id="lavanderia">
             <h3>Servicio de lavandería</h3>
+
             <!-- p con la descripción del servicio y un enlace o botón para solicitarlo -->
+              <p>Lavamos, secamos y planchamos tu ropa. Retiramos las prendas en tu departamento y te las
+            devolvemos dentro de las 24 horas. Este servicio tiene un costo adicional que se suma a la cuenta de tu estadía.</p>
+
+            <div>
+                <form action="" accept-charset="UTF-8" method="post">
+                    <fieldset>
+                        <legend>Solicitar lavandería</legend>
+                        <p>
+                            <label for="codigo_lavanderia">Código de reserva *</label>
+                            <input id="codigo_lavanderia" name="codigo_lavanderia" type="text" required minlength="6"
+                            maxlength="12" placeholder="ej: TER-00125">
+                        </p>
+                        <p>
+                            <label for="tipo_lavado">Tipo de servicio *</label>
+                            <select id="tipo_lavado" name="tipo_lavado" required>
+                                <option value="1">Lavado y secado</option>
+                                <option value="2">Lavado, secado y planchado</option>
+                                <option value="3">Solo planchado</option>
+                            </select>
+                        </p>
+                        <p>
+                            <label for="cantidad_prendas">Cantidad de prendas *</label>
+                            <input id="cantidad_prendas" name="cantidad_prendas" type="number" min="1" max="30" required>
+                        </p>
+                        <p>
+                            <label for="notas_lavanderia">Observaciones</label>
+                            <textarea id="notas_lavanderia" name="notas_lavanderia" rows="3"
+                            placeholder="ej: prendas delicadas">
+                            </textarea>
+                        </p>
+                    </fieldset>
+                    <input type="submit" value="Solicitar">
+                    <input type="reset" value="Borrar">
+                </form>
+            </div>
         </section>
 
         <section id="medios-pago">
             <h3>Medios de pago</h3>
             <!-- ul con las opciones (efectivo, tarjetas, transferencia) o img con los logos -->
+            
+            <p>Podés abonar tu estadía y los servicios adicionales con cualquiera de estos medios:</p>
+            <ul>
+                <li>Efectivo (en recepción)</li>
+                <li>Tarjeta de débito</li>
+                <li>Tarjeta de crédito (hasta 3 cuotas sin interés)</li>
+                <li>Transferencia bancaria</li>
+                <li>Billeteras virtuales (pago con código QR)</li>
+            </ul>
+            <p>Los servicios adicionales, como la lavandería o la limpieza fuera de horario, se abonan junto
+            con la estadía al momento del check-out.</p>
         </section>
 
     </main>
